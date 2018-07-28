@@ -1,0 +1,143 @@
+#root {
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom right, #A6DAD8, #389394);
+}
+
+.wrapper {
+  width: 100%;
+  height: 400px;
+  max-width: 800px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  margin-left: -400px;
+  margin-top: -200px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px teal;
+}
+
+.content, .sidebar {
+  width: 50%;
+  height: 400px;
+  float: left;
+  background-color: white;
+  position: relative;
+  color: #203F3E;
+}
+
+.content-title, .content-body{
+  padding-left: 50px;
+  padding-right: 50px;
+  display: inline-block;
+}
+
+.content-title {
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.content-title em {
+  font-style: normal;
+  position: relative;
+}
+
+.content-title em *{
+  z-index: 1;
+}
+
+.content-title em::before {
+  content: '';
+  background: #66B2B3;
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  width: 100%;
+  height: 8px;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.content-footer {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 0;
+  left: 0;
+  display: table;
+}
+
+.content-footer i {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.slider-controller {
+  position: absolute;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: table;
+  cursor: pointer;
+}
+
+.slider-previous {
+  left: -50px;
+  color: white;
+  background: #76B1B4;
+}
+
+.slider-next {
+  left: 0;
+  color: #76B1B4;
+  background: white;
+}
+
+.slider-controller span {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    margin-top: 0;
+    border-radius: 0;
+    height: 800px;
+  }
+  
+  .content, .sidebar {
+    width: 100%;
+    float: left;
+    background-color: white;
+  }
+  
+  .slider-previous {
+    left: initial;
+    top: -50px;
+    right: 0px;
+    bottom: initial;
+  }
+
+  .slider-next {
+    right: 0;
+    top: 0;
+    left: initial;
+    bottom: initial;
+  }
+}

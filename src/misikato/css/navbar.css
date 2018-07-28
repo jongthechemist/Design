@@ -1,0 +1,19 @@
+.navbar {
+  width: 100%;
+  margin: 0 0 30px 0;
+  display: inline-block;
+  overflow-x: auto;
+}
+
+.navbar li{
+  float: left;
+  list-style: none;
+  padding: 15px;
+  border-right: 1px solid white;
+}
+
+.navbar li:first-child, .navbar li:hover{
+  color: white;
+  background: teal;
+  cursor: pointer;
+}
