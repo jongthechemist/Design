@@ -1,8 +1,6 @@
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import './css/slider.css';
-import SliderPreviousController from "./SliderPreviousController";
-import SliderNextController from "./SliderNextController";
 
 class Slider extends Component {
 
@@ -40,27 +38,20 @@ class Slider extends Component {
   }
 
   render() {
-    const { children, images } = this.props;
-    const {currentIndex} = this.state;
-
-    const previousController = this.getFirstChildOfType(children, SliderPreviousController);
-    const nextController = this.getFirstChildOfType(children, SliderNextController);
+    const { images } = this.props;
+    const { currentIndex } = this.state;
 
     return (
       <div className="slider">
         <div className="slider-img-container">
-          <div className="slider-imgs" style={{ top: ((currentIndex%images.length)*-100)+'%' }}>
+          <div className="slider-imgs" style={{ top: (Math.abs(currentIndex%images.length)*-100)+'%' }}>
             {
               images.map(img=><img src={img} key={img} alt="img1"/>)
             }
           </div>
         </div>
-        {
-          previousController && React.cloneElement(previousController, {onClick: this.previousClicked})
-        }
-        {
-          nextController && React.cloneElement(nextController, {onClick: this.nextClicked})
-        }
+        <div className="slider-controller slider-previous" onClick={this.previousClicked}><span>&lt;</span></div>
+        <div className="slider-controller slider-next" onClick={this.nextClicked}><span>&gt;</span></div>
       </div>
     )
 

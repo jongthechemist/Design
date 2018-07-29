@@ -16,6 +16,7 @@ const BODY = ()=>(
 const FOOTER = ()=>(
   <div className="content-footer">
     <i className="fas fa-vial"></i>
+    <span>by <a href="https://dribbble.com/shots/4869749">Misikato</a></span>
   </div>
 );
 

@@ -1,4 +1,4 @@
-#root {
+.misikato.body {
   font-family: 'Poppins', sans-serif;
   position: absolute;
   top: 0;
@@ -68,17 +68,20 @@
 
 .content-footer {
   position: absolute;
-  width: 50px;
-  height: 50px;
   bottom: 0;
   left: 0;
   display: table;
 }
 
-.content-footer i {
+.content-footer > * {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+}
+
+.content-footer i {
+  width: 50px;
+  height: 50px;
 }
 
 .slider-controller {

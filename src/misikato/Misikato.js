@@ -7,9 +7,11 @@ export default class Misikato extends Component {
 
   render() {
     return (
-      <div className="wrapper">
-        <Content/>
-        <Sidebar/>
+      <div className="misikato body">
+        <div className="wrapper">
+          <Content/>
+          <Sidebar/>
+        </div>
       </div>
     )
   }
